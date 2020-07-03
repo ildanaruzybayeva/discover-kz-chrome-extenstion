@@ -11,17 +11,31 @@ const randIdx = Math.floor(Math.random() * 15);
 
 function Background() {
   const [image, setImage] = useState("");
+  const [descriton, setDescription] = useState("");
+  const [author, setAuthor] = useState("");
+
   useEffect(() => {
     unsplash.search
-      .photos("almaty", 1, 15, { orientation: "landscape", order_by: "latest" })
+      .photos("almaty city", 1, 15, {
+        orientation: "landscape",
+        order_by: "latest"
+      })
       .then(toJson)
       .then(data => {
         setImage(data.results[randIdx].urls.raw);
+        setDescription(data.results[randIdx].alt_description);
+        setAuthor(data.results[randIdx].user.username);
       });
   }, []);
   return (
-    <div className="background">
-      <img src={image} alt="kz" />
+    <div className="image-container">
+      <div className="image-info">
+        <h4>{descriton}</h4>
+        <p>author: {author}</p>
+      </div>
+      <div className="image-picture">
+        <img src={image} alt={descriton} />
+      </div>
     </div>
   );
 }
