@@ -1,6 +1,5 @@
 .Weather {
   display: flex;
-  border: 1px solid pink;
 }
 .city-temp {
   font-size: 5rem;

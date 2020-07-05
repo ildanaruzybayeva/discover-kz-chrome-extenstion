@@ -35,9 +35,8 @@ function Background() {
       });
   };
 
-  useEffect(() => {
-    getWeather();
-    unsplash.search
+  const getPhoto = () => {
+    const data = unsplash.search
       .photos("almaty city", 1, 15, {
         orientation: "landscape",
         order_by: "latest"
@@ -48,6 +47,11 @@ function Background() {
         setDescription(data.results[randIdx].alt_description);
         setAuthor(data.results[randIdx].user.username);
       });
+  };
+
+  useEffect(() => {
+    getWeather();
+    getPhoto();
   }, []);
 
   return (
