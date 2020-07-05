@@ -1,4 +1,4 @@
-img {
+.backgroundImage {
   z-index: -1;
   /* Set rules to fill background */
   min-height: 100%;
