@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Unsplash, { toJson } from "unsplash-js";
 import "./Background.css";
 import Weather from "../Weather/Weather";
-import axios from "axios";
+import { almatyTime, randNum } from "../../utils/helpers/helpers";
 
-const unsplash = new Unsplash({
-  accessKey: "1911bed2e67cf6900e231737eb1ebabaca3168bdb5f7908087f046ff1c820fd1",
-  secret: "3ecb1c1711fdc64c6711be8dfcd0ab2705bf5d1c7242e8ebc8c5665791b678a6"
-});
-
-const randIdx = Math.floor(Math.random() * 15);
-const URL =
-  "https://8000-cbaf8907-4dfb-49fb-bf75-aef554dd1cd0.ws-eu01.gitpod.io/weather";
+const URL_PHOTOS =
+  "https://8000-a334ccf2-365c-4afc-8e65-38540926ff08.ws-eu01.gitpod.io/photos";
+const URL_WEATHER =
+  "https://8000-a334ccf2-365c-4afc-8e65-38540926ff08.ws-eu01.gitpod.io/weather";
 
 function Background() {
   const [image, setImage] = useState("");
@@ -24,7 +19,7 @@ function Background() {
   const [weatherInfo, setWeatherInfo] = useState("");
 
   const getWeather = () => {
-    const data = fetch(URL)
+    const data = fetch(URL_WEATHER)
       .then(res => res.json())
       .then(data => {
         setCity(data.name);
@@ -33,20 +28,18 @@ function Background() {
         seticon(data.weather[0].icon);
         setWeatherInfo(data.weather[0].description);
       });
+    return data;
   };
 
   const getPhoto = () => {
-    const data = unsplash.search
-      .photos("almaty city", 1, 15, {
-        orientation: "landscape",
-        order_by: "latest"
-      })
-      .then(toJson)
+    const data = fetch(URL_PHOTOS)
+      .then(res => res.json())
       .then(data => {
-        setImage(data.results[randIdx].urls.raw);
-        setDescription(data.results[randIdx].alt_description);
-        setAuthor(data.results[randIdx].user.username);
+        setImage(data.results[randNum].urls.raw);
+        setDescription(data.results[randNum].alt_description);
+        setAuthor(data.results[randNum].user.username);
       });
+    return data;
   };
 
   useEffect(() => {
@@ -72,6 +65,7 @@ function Background() {
           weatherInfo={weatherInfo}
         />
       </div>
+      <div className="timeAlmaty">{almatyTime}</div>
     </div>
   );
 }
