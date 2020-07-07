@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Background.css";
 import Weather from "../Weather/Weather";
+import Image from "../Image/Image";
 import { almatyTime, randNum } from "../../utils/helpers/helpers";
 
 const URL_PHOTOS =
@@ -35,7 +36,7 @@ function Background() {
     const data = fetch(URL_PHOTOS)
       .then(res => res.json())
       .then(data => {
-        setImage(data.results[randNum].urls.raw);
+        setImage(data.results[randNum].urls.regular);
         setDescription(data.results[randNum].alt_description);
         setAuthor(data.results[randNum].user.username);
       });
@@ -48,23 +49,15 @@ function Background() {
   }, []);
 
   return (
-    <div className="image-container">
-      <div className="image-info">
-        <h4>{descriton}</h4>
-        <p>author: {author}</p>
-      </div>
-      <div className="image-picture">
-        <img src={image} alt={descriton} className="backgroundImage" />
-      </div>
-      <div>
-        <Weather
-          temperature={temperature}
-          country={country}
-          city={city}
-          icon={icon}
-          weatherInfo={weatherInfo}
-        />
-      </div>
+    <div className="container">
+      <Image descriton={descriton} author={author} image={image} />
+      <Weather
+        temperature={temperature}
+        country={country}
+        city={city}
+        icon={icon}
+        weatherInfo={weatherInfo}
+      />
       <div className="timeAlmaty">{almatyTime}</div>
     </div>
   );
