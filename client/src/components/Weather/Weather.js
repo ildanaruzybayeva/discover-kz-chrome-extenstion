@@ -5,7 +5,7 @@ function Weather(props) {
   return (
     <div className="Weather">
       <span>{props.city}</span>
-      <span>{props.weatherInfo}</span>
+      <span>{props.temperature}</span>
       <img
         className="city-icon"
         src={`https://openweathermap.org/img/wn/${props.icon}@2x.png`}
