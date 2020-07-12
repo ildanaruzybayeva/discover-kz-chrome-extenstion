@@ -4,8 +4,8 @@ import "./Currency.css";
 export default function Currency(props) {
   return (
     <div>
-      <p>USD-KZT: 123456</p>
-      <p>EUR-KZT: 123456</p>
+      <p>USD: {Math.trunc(props.currency.USD_KZT)} ₸</p>
+      <p>EUR: {Math.trunc(props.currency.EUR_KZT)} ₸</p>
     </div>
   );
 }

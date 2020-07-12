@@ -9,7 +9,6 @@ router.get("/currency", async (req, res) => {
   try {
     const response = await fetch(URL);
     const data = await response.json();
-    console.log(data);
     res.send(data);
   } catch (err) {
     console.log(err);
