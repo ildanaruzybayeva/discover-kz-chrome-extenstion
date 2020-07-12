@@ -11,8 +11,10 @@ const unsplash = new Unsplash({
 
 router.get("/photos", async (req, res) => {
   try {
-    unsplash.search
-      .photos("Almaty", 1, 100, { orientation: "portrait" })
+    // unsplash.search
+    //   .photos("Almaty", 1, 100, { orientation: "portrait" })
+    unsplash.collections
+      .getCollectionPhotos(9511364, 1, 55, "latest")
       .then(res => res.json())
       .then(data => {
         res.send(data);
@@ -24,4 +26,5 @@ router.get("/photos", async (req, res) => {
   }
 });
 
+unsplash.users.collections("naoufal", 2, 15, "updated");
 module.exports = router;
