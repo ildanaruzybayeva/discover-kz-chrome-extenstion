@@ -4,3 +4,4 @@
 
 https://github.com/unsplash/unsplash-js
 IMPORTANT: "build": "set INLINE_RUNTIME_CHUNK=false&& react-scripts build",
+backend deploy: https://chrome-extension-kz.herokuapp.com/

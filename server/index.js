@@ -1,4 +1,4 @@
-const http = require('http');
+const http = require("http");
 const express = require("express");
 const app = express();
 const server = http.createServer(app);
@@ -13,7 +13,9 @@ app.use("/", require("./routes/unsplash"));
 app.use("/", require("./routes/currency"));
 
 app.get("/", (req, res) => {
-  res.send("Hello KZ!");
+  res.send("The server is running, use /weather /photos to get data!");
 });
 
-server.listen(process.env.PORT || 8000, () => console.log(`Server has started on port 8000.`));
+server.listen(process.env.PORT || 8000, () =>
+  console.log(`Server has started on port 8000.`)
+);
