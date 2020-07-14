@@ -2,9 +2,8 @@ const express = require("express");
 const router = express.Router();
 const fetch = require("node-fetch");
 
-const API_KEY = "f33a484cf794d08d0148764789aaba32";
 const city = "Almaty";
-const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.weatherAPI}&units=metric`;
 
 router.get("/weather", async (req, res) => {
   try {
