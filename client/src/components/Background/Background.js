@@ -7,7 +7,7 @@ import Greeting from "../Greeting/Greeting";
 import Currency from "../Currency/Currency";
 
 const URL =
-  "https://8000-a1ea5764-1c9c-4e01-8116-919f8c363ece.ws-eu01.gitpod.io";
+  "https://chrome-extension-kz.herokuapp.com";
 
 function Background() {
   const [image, setImage] = useState("");
