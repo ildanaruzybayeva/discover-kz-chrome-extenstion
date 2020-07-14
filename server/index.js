@@ -1,6 +1,7 @@
+const http = require('http');
 const express = require("express");
 const app = express();
-const port = 8000;
+const server = http.createServer(app);
 const cors = require("cors");
 const dotenv = require("dotenv");
 dotenv.config();
@@ -15,6 +16,4 @@ app.get("/", (req, res) => {
   res.send("Hello KZ!");
 });
 
-app.listen(port, () =>
-  console.log(`Example app listening at http://localhost:${port}`)
-);
+server.listen(process.env.PORT || 8000, () => console.log(`Server has started on port 8000.`));
