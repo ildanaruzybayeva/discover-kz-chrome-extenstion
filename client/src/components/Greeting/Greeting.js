@@ -1,6 +1,6 @@
 import React from "react";
-import { almatyTime } from "../../utils/helpers/helpers";
 import './Greeting.css'
+import { almatyTime } from "../../utils/helpers/helpers";
 
 console.log(almatyTime);
 
