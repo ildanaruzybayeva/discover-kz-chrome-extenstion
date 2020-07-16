@@ -16,6 +16,10 @@ app.get("/", (req, res) => {
   res.send("The server is running, use /weather /photos to get data!");
 });
 
+app.use((req, res, next) => {
+  res.status(404).send("<h1>Page not found</h1>");
+});
+
 server.listen(process.env.PORT || 8000, () =>
   console.log(`Server has started on port 8000.`)
 );
