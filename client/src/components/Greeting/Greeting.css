@@ -1,3 +1,7 @@
-.greeting {
+.greeting-text {
     color: white;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 150px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }

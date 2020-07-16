@@ -1,3 +1,6 @@
-p {
+.paragraph-currency {
   color: white;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: 30px;
 }
