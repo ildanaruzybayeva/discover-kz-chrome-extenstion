@@ -5,9 +5,9 @@ import Image from "../Image/Image";
 import { randNum } from "../../utils/helpers/helpers";
 import Greeting from "../Greeting/Greeting";
 import Currency from "../Currency/Currency";
+import useLocalStorage from "./customHooks/useLocalStorage";
 
-const URL =
-  "https://chrome-extension-kz.herokuapp.com";
+const URL = "https://chrome-extension-kz.herokuapp.com";
 
 function Background() {
   const [image, setImage] = useState("");
@@ -16,6 +16,7 @@ function Background() {
   const [temperature, setTemperature] = useState(0);
   const [icon, seticon] = useState("");
   const [currency, setCurrency] = useState({});
+  const [username, setUsername] = useLocalStorage("name", "");
 
   const getWeather = () => {
     const data = fetch(`${URL}/weather`)
@@ -54,11 +55,15 @@ function Background() {
     getCurrency();
   }, []);
 
+  const handleChange = e => {
+    return setUsername(e.target.value);
+  };
+
   return (
     <div className="container">
       <Image author={author} image={image} />
       <Weather temperature={temperature} city={city} icon={icon} />
-      <Greeting />
+      <Greeting username={username} handleChange={handleChange} />
       <Currency currency={currency} />
     </div>
   );
