@@ -6,10 +6,12 @@ import { randNum, currentTime } from "../../utils/helpers/helpers";
 import Greeting from "../Greeting/Greeting";
 import Currency from "../Currency/Currency";
 import useLocalStorage from "./customHooks/useLocalStorage";
-import Time from "../Time/Time"
+import Time from "../Time/Time";
+import Quote from "../Quote/Quote";
 
 const URL = "https://chrome-extension-kz.herokuapp.com";
 const time = "July 23rd";
+const quote = "This is a quote";
 
 function Background() {
   const [image, setImage] = useState("");
@@ -68,6 +70,7 @@ function Background() {
       <Time time={time} />
       <Greeting username={username} handleChange={handleChange} />
       <Currency currency={currency} />
+      <Quote quote={quote} />
     </div>
   );
 }
