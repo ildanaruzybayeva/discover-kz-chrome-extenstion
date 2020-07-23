@@ -8,6 +8,7 @@ import Currency from "../Currency/Currency";
 import useLocalStorage from "./customHooks/useLocalStorage";
 import Time from "../Time/Time";
 import News from "../News/News";
+import Search from "../Search/Search";
 import Quote from "../Quote/Quote";
 
 const URL = "https://chrome-extension-kz.herokuapp.com";
@@ -71,6 +72,7 @@ function Background() {
       <Greeting username={username} handleChange={handleChange} />
       <Currency currency={currency} />
       <News />
+      <Search />
       <Quote quote={quote} />
     </div>
   );
