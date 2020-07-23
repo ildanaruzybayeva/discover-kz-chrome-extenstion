@@ -4,10 +4,8 @@ import icon from "./search.svg";
 
 function Search() {
     return (
-        <form>
-            <a>
-                <img src={icon} alt="Search icon"></img>
-            </a>
+        <form className="search-container">
+            <img src={icon} alt="Search icon"></img>
             <input placeholder="Google search"/>
         </form>
     )
