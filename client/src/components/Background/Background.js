@@ -2,14 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./Background.css";
 import Weather from "../Weather/Weather";
 import Image from "../Image/Image";
-import { randNum, currentTime } from "../../utils/helpers/helpers";
+import { randNum } from "../../utils/helpers/helpers";
 import Greeting from "../Greeting/Greeting";
 import Currency from "../Currency/Currency";
 import useLocalStorage from "./customHooks/useLocalStorage";
-import Time from "../Time/Time"
+import Time from "../Time/Time";
 
 const URL = "https://chrome-extension-kz.herokuapp.com";
-const time = "July 23rd";
 
 function Background() {
   const [image, setImage] = useState("");
@@ -65,7 +64,7 @@ function Background() {
     <div className="container">
       <Image author={author} image={image} />
       <Weather temperature={temperature} city={city} icon={icon} />
-      <Time time={time} />
+      <Time />
       <Greeting username={username} handleChange={handleChange} />
       <Currency currency={currency} />
     </div>
