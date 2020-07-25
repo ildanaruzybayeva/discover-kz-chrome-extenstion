@@ -7,8 +7,8 @@ const fetch = require("node-fetch");
 router.get("/currency", async (req, res) => {
   try {
     const data = {
-      USD_KZT: 412,
-      EUR_KZT: 465
+      USD_KZT: 415,
+      EUR_KZT: 480
     };
     res.send(data);
   } catch (err) {

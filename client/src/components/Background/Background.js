@@ -11,7 +11,7 @@ import News from "../News/News";
 import Search from "../Search/Search";
 import Quote from "../Quote/Quote";
 
-const URL = "https://chrome-extension-kz.herokuapp.com";
+const URL = "https://kz-extension.herokuapp.com";
 const quote = "This is a quote";
 
 function Background() {
