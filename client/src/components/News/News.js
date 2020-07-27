@@ -1,16 +1,19 @@
 import React from "react";
 import "./News.css";
 
-function News() {
-    return (
-        <div class="news-container">
-            <p class="news-paragraph">Here are the news for today.</p>
-            <p class="news-paragraph">Here are the news for today.</p>
-            <p class="news-paragraph">Here are the news for today.</p>
-            <p class="news-paragraph">Here are the news for today.</p>
-            <p class="news-paragraph">Here are the news for today.</p>
-        </div>
-    )
+function News(props) {
+  return (
+    <div class="news-container">
+      <a
+        target="_blank"
+        href={props.link}
+        rel="noopener noreferrer"
+        class="news-paragraph"
+      >
+        {props.title}
+      </a>
+    </div>
+  );
 }
 
 export default News;
