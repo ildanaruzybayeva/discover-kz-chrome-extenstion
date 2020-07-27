@@ -12,6 +12,7 @@ app.use("/", require("./routes/weather"));
 app.use("/", require("./routes/unsplash"));
 app.use("/", require("./routes/currency"));
 app.use("/", require("./routes/news"));
+app.use("/", require("./routes/quotes"));
 
 app.get("/", (req, res) => {
   res.send("The server is running, use /weather /photos to get data!");
