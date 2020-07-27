@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const fetch = require("node-fetch");
 const puppeteer = require("puppeteer");
 
 const URL = "https://rus.azattyq.org/z/2231";
