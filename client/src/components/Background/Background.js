@@ -22,6 +22,7 @@ function Background() {
   const [icon, seticon] = useState("");
   const [currency, setCurrency] = useState({});
   const [username, setUsername] = useLocalStorage("name", "");
+  const [news, setNews] = useState([]);
 
   const getWeather = () => {
     const data = fetch(`${URL}/weather`)
@@ -48,8 +49,16 @@ function Background() {
     const data = fetch(`${URL}/currency`)
       .then(res => res.json())
       .then(data => {
-        console.log(data);
         setCurrency(data);
+      });
+    return data;
+  };
+
+  const getNews = () => {
+    const data = fetch(`${URL}/news`)
+      .then(res => res.json())
+      .then(data => {
+        setNews(data);
       });
     return data;
   };
@@ -58,6 +67,7 @@ function Background() {
     getWeather();
     getPhoto();
     getCurrency();
+    getNews();
   }, []);
 
   const handleChange = e => {
@@ -71,7 +81,9 @@ function Background() {
       <Time />
       <Greeting username={username} handleChange={handleChange} />
       <Currency currency={currency} />
-      <News />
+      {news.map(n => {
+        return <News title={n.title} link={n.link} />;
+      })}
       <Search />
       <Quote quote={quote} />
     </div>
