@@ -6,11 +6,12 @@ console.log(almatyTime);
 
 export default function Greeting(props) {
   return (
-    <div>
-      <h1 className="greeting-text">Salem, </h1>
+    <div className="Greeting">
+      <h1 className="greeting-text">Salem,</h1>
       <input
+        className="greeting-input"
         type="text"
-        placeholder="seniñ atıñ kim?"
+        placeholder="аты"
         value={props.username}
         onChange={props.handleChange}
       />

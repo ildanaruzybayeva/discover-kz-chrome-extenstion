@@ -1,24 +1,30 @@
-.greeting-text {
-  color: white;
-  font-family: "Roboto Slab", serif;
-  font-weight: 700;
-  font-size: 150px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-input[type="text"] {
-  background: transparent;
-  border: none;
-  color: white;
-  font-family: "Roboto Slab", serif;
-  font-weight: 700;
-  font-size: 150px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.Greeting {
   width: 100%;
-  min-width: 4px;
+  background-color: white;
+  padding: 0 14px 14px 18px;
 }
 
-input:focus {
+.greeting-text {
+  color: black;
+  font-family: 'Playfair Display SC', serif;
+  font-weight: 700;
+  font-size: 80px;
+}
+
+.greeting-input {
+  border: none;
+  color: black;
+  background-color: transparent;
+  font-family: 'Playfair Display SC', serif;
+  font-weight: 700;
+  font-size: 80px;
+  min-width: 4px;
+  max-width: 50vw;
+  margin-top: -32px;
+  margin-left: 64px;
+}
+
+.greeting-input:focus {
   outline: none;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid black;
 }

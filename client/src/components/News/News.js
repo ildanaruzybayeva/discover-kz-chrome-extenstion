@@ -2,18 +2,16 @@ import React from "react";
 import "./News.css";
 
 function News(props) {
-  return (
-    <div class="news-container">
-      <a
-        target="_blank"
-        href={props.link}
-        rel="noopener noreferrer"
-        class="news-paragraph"
-      >
-        {props.title}
-      </a>
-    </div>
-  );
+    return (
+        <a
+            target="_blank"
+            href={props.link}
+            rel="noopener noreferrer"
+            className="news-paragraph"
+        >
+            {props.title}
+        </a>
+    );
 }
 
 export default News;

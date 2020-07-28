@@ -3,7 +3,11 @@ import "./Time.css";
 import Clock from "react-live-clock";
 
 function Time() {
-  return <Clock format={"HH:mm:ss"} ticking={true} timezone={"Asia/Almaty"} />;
+  return (
+      <div className="Time">
+          <Clock format={"HH:mm:ss"} ticking={true} timezone={"Asia/Almaty"} />
+      </div>
+  );
 }
 
 export default Time;

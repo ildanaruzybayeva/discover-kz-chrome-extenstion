@@ -3,7 +3,10 @@ import "./Quote.css";
 
 function Quote(props) {
     return (
-        <h1>{props.quote}</h1>
+        <div className="Quote">
+            <p className="quote paragraph">{props.quote}</p>
+            <p className="quote author">The author</p>
+        </div>
     )
 }
 
