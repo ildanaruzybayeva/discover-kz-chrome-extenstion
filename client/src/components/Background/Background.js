@@ -12,7 +12,7 @@ import Search from "../Search/Search";
 import Quote from "../Quote/Quote";
 
 const URL = "https://kz-extension.herokuapp.com";
-const quote = "This is a quote";
+const quote = "Безвреден кто в гневе кричит. Бойся того, кто в гневе молчит.";
 
 function Background() {
   const [image, setImage] = useState("");
@@ -66,14 +66,31 @@ function Background() {
 
   return (
     <div className="container">
-      <Image author={author} image={image} />
-      <Weather temperature={temperature} city={city} icon={icon} />
-      <Time />
-      <Greeting username={username} handleChange={handleChange} />
-      <Currency currency={currency} />
-      <News />
-      <Search />
-      <Quote quote={quote} />
+        
+      <div className="image-container">
+        <Image author={author} image={image} />
+      </div>
+      <div className="info-container">
+        <div className="info-top">
+            <Weather temperature={temperature} city={city} icon={icon} />
+            <Time />
+            <Currency currency={currency} />
+        </div>
+        <div className="greeting-container">
+            <Greeting username={username} handleChange={handleChange} />
+        </div>
+        <div className="info-bottom">
+            <div className="news-container">
+                <News />
+            </div>
+            <div className="search-container">
+                <Search />
+            </div>
+            <div className="quote-container">
+                <Quote quote={quote} />
+            </div>
+        </div>
+      </div>
     </div>
   );
 }

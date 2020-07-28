@@ -4,13 +4,15 @@ import "./Weather.css";
 function Weather(props) {
     return (
         <div className="Weather">
-            <span className="paragraph-city-info">{props.city}</span>
-            <span className="paragraph-city-info">{props.temperature}</span>
-            <img
-                className="city-icon"
-                src={`https://openweathermap.org/img/wn/${props.icon}@2x.png`}
-                alt={props.city}
-            />
+            <div className="weather-info">
+                <img
+                    className="weather-icon"
+                    src={`https://openweathermap.org/img/wn/${props.icon}@2x.png`}
+                    alt={props.city}
+                />
+                <p className="paragraph-city-info">{props.temperature}°C</p>
+            </div>
+            <p className="paragraph-city-info">{props.city}</p>
         </div>
     );
 }

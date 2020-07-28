@@ -1,19 +1,22 @@
-.backgroundImage {
-  z-index: -1;
-  /* Set rules to fill background */
-  min-height: 100%;
-  min-width: 1024px;
-
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: 70%;
-
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
+.Image {
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
-.image-info {
+.image-background {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.image-author {
   color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  position: absolute;
+  left: 3px;
+  bottom: 3px;
+  z-index: 2;
 }

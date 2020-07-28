@@ -5,8 +5,8 @@ import icon from "./search.svg";
 function Search() {
     return (
         <form className="search-container">
-            <img src={icon} alt="Search icon"></img>
-            <input placeholder="Google search"/>
+            <img className="search-icon" src={icon} alt="Search icon"></img>
+            <input className="search-input" placeholder="Google search"/>
         </form>
     )
 }

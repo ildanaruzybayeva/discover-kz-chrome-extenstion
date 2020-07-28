@@ -1,6 +1,13 @@
-.paragraph-currency {
-  color: white;
-  font-family: 'Roboto Slab', serif;
-  font-weight: 700;
-  font-size: 30px;
+.currency-container {
+  width: 100%;
+  height: 100%;
 }
+
+.paragraph-currency {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+}
+
