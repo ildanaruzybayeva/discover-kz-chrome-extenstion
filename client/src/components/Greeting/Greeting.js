@@ -1,13 +1,13 @@
 import React from "react";
 import "./Greeting.css";
-import { almatyTime } from "../../utils/helpers/helpers";
+import { almatyTimeHour, chooseGreeting } from "../../utils/helpers/helpers";
 
-console.log(almatyTime);
+const greeting = chooseGreeting(almatyTimeHour);
 
 export default function Greeting(props) {
   return (
     <div className="Greeting">
-      <h1 className="greeting-text">Salem,</h1>
+      <h1 className="greeting-text">{greeting},</h1>
       <input
         className="greeting-input"
         type="text"
