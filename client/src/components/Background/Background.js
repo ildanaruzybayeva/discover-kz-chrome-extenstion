@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from "react";
-import "./Background.css";
 import Weather from "../Weather/Weather";
 import Image from "../Image/Image";
-import { randNum } from "../../utils/helpers/helpers";
 import Greeting from "../Greeting/Greeting";
 import Currency from "../Currency/Currency";
-import useLocalStorage from "./customHooks/useLocalStorage";
 import Time from "../Time/Time";
 import News from "../News/News";
 import Search from "../Search/Search";
 import Quote from "../Quote/Quote";
+import useLocalStorage from "./customHooks/useLocalStorage";
+import "./Background.css";
+import { randNum } from "../../utils/helpers/helpers";
 
 const URL = "https://kz-extension.herokuapp.com";
-const quote = "Безвреден кто в гневе кричит. Бойся того, кто в гневе молчит.";
 
 function Background() {
   const [image, setImage] = useState("");
@@ -23,6 +22,7 @@ function Background() {
   const [currency, setCurrency] = useState({});
   const [username, setUsername] = useLocalStorage("name", "");
   const [news, setNews] = useState([]);
+  const [quotes, setQuotes] = useState([]);
 
   const getWeather = () => {
     const data = fetch(`${URL}/weather`)
@@ -58,8 +58,16 @@ function Background() {
     const data = fetch(`${URL}/news`)
       .then(res => res.json())
       .then(data => {
-        console.log(data);
         setNews(data);
+      });
+    return data;
+  };
+
+  const getQuotes = () => {
+    const data = fetch(`${URL}/quotes`)
+      .then(res => res.json())
+      .then(data => {
+        setQuotes(data[randNum].quote);
       });
     return data;
   };
@@ -69,6 +77,7 @@ function Background() {
     getPhoto();
     getCurrency();
     getNews();
+    getQuotes();
   }, []);
 
   const handleChange = e => {
@@ -99,7 +108,7 @@ function Background() {
             <Search />
           </div>
           <div className="quote-container">
-            <Quote quote={quote} />
+            <Quote quotes={quotes} />
           </div>
         </div>
       </div>
