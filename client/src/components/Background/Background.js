@@ -67,7 +67,7 @@ function Background() {
     const data = fetch(`${URL}/quotes`)
       .then(res => res.json())
       .then(data => {
-        setQuotes(data[0].quote);
+        setQuotes(data[randNum].quote);
       });
     return data;
   };
