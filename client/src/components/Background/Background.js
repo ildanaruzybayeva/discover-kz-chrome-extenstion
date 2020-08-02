@@ -21,7 +21,7 @@ function Background() {
   const [icon, seticon] = useState("");
   const [currency, setCurrency] = useState({});
   const [username, setUsername] = useLocalStorage("name", "");
-  const [news, setNews] = useState([]);
+  const [news, setNews] = useLocalStorage("news", []);
   const [quotes, setQuotes] = useState([]);
 
   const getWeather = () => {
@@ -59,6 +59,7 @@ function Background() {
       .then(res => res.json())
       .then(data => {
         setNews(data);
+        localStorage.setItem("news", JSON.stringify(data));
       });
     return data;
   };
