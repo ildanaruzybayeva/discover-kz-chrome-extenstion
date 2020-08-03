@@ -17,25 +17,22 @@ Discover Kazakhstan is a chrome extension that allows anyone using google chrome
 
 ## Using Discover Kazakhstan
 
-To use <project_name>, follow these steps:
+The app is currently in production and is not yet deployed to google chrome store.
 
-```
-<usage_example>
-```
+The front end is continously deployed to:
+https://discover-kz-extension.netlify.app/
 
-Add run commands and examples you think users will find useful. Provide an options reference for bonus points!
+Back-end is deployed to:
+https://kz-extension.herokuapp.com/
+
+
 
 ## Contributing to Discover Kazakhstan
-<!--- If your README is long or you have some specific process or steps you want contributors to follow, consider creating a separate CONTRIBUTING.md file--->
-To contribute to <project_name>, follow these steps:
+If you wish to contribute to Discover Kazakhstan, follow these steps:
 
-1. Fork this repository.
-2. Create a branch: `git checkout -b <branch_name>`.
-3. Make your changes and commit them: `git commit -m '<commit_message>'`
-4. Push to the original branch: `git push origin <project_name>/<location>`
-5. Create the pull request.
-
-Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1. Create or assign an issue to yourself
+2. Create a branch in the following way: `git checkout -b feature/issueNumber or bug/issueNumber`.
+3. Commit your changes and open PR for a review
 
 ## Team
 
@@ -45,7 +42,7 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 
 ## Contact
 
-Feel free to contact me <ildana.ruzybayeva@gmail.com>.
+Feel free to contact me at <ildvnv@gmail.com> if you have any business related questions
 
 ## License
 <!--- If you're not sure which open license to use see https://choosealicense.com/--->
