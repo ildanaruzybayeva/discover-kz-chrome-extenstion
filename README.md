@@ -15,7 +15,7 @@ Project name is a chrome extension that allows anyone using google chrome to get
 6. Almaty time / weather
 
 
-## Using <project_name>
+## Using Discover Kazakhstan
 
 To use <project_name>, follow these steps:
 
@@ -25,7 +25,7 @@ To use <project_name>, follow these steps:
 
 Add run commands and examples you think users will find useful. Provide an options reference for bonus points!
 
-## Contributing to <project_name>
+## Contributing to Discover Kazakhstan
 <!--- If your README is long or you have some specific process or steps you want contributors to follow, consider creating a separate CONTRIBUTING.md file--->
 To contribute to <project_name>, follow these steps:
 
