@@ -5,7 +5,7 @@
 # Discover Kazakhstan: a chrome extension
 
 
-Project name is a chrome extension that allows anyone using google chrome to get a custom tab with the following features: 
+Discover Kazakhstan is a chrome extension that allows anyone using google chrome to get a custom tab with the following features: 
 
 1. Get latest news from https://rus.azattyq.org/z/2231
 2. Get a featured picture from https://unsplash.com/collections/9511364/kazakhstan
