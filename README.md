@@ -43,8 +43,3 @@ If you wish to contribute to Discover Kazakhstan, follow these steps:
 ## Contact
 
 Feel free to contact me at <ildvnv@gmail.com> if you have any business related questions
-
-## License
-<!--- If you're not sure which open license to use see https://choosealicense.com/--->
-
-This project uses the following license: [<license_name>](<link>).
