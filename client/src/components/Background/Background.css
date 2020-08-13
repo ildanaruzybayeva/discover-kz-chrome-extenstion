@@ -47,7 +47,6 @@
 }
 
 .quote-container {
-  /* width: 18vw; */
-  width: 80%;
+  width: fit-content;
   margin-top: 20px;
 }
