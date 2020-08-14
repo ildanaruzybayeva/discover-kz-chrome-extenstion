@@ -11,7 +11,7 @@ export default function Greeting(props) {
       <input
         className="greeting-input"
         type="text"
-        placeholder="аты"
+        placeholder="atyńyz kіm?"
         value={props.username}
         onChange={props.handleChange}
       />

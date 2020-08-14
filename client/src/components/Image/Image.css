@@ -1,22 +1,31 @@
 .Image {
-    width: 100%;
-    height: 100%;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .image-background {
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
 }
 
 .image-author {
   color: white;
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
   position: absolute;
   left: 3px;
-  bottom: 3px;
+  bottom: 5px;
   z-index: 2;
+}
+
+.image-author a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.image-author a:hover {
+  color: black;
 }
