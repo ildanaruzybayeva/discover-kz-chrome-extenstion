@@ -4,6 +4,13 @@ const puppeteer = require("puppeteer");
 
 const URL = "https://rus.azattyq.org/z/2231";
 
+const errNews = [
+  {
+    title: "news can't be fethed, access direct source here",
+    link: "https://rus.azattyq.org/z/2231"
+  }
+];
+
 router.get("/news", async (req, res) => {
   try {
     const browser = await puppeteer.launch({
@@ -54,7 +61,7 @@ router.get("/news", async (req, res) => {
     browser.close();
   } catch (err) {
     console.log(err);
-    res.send(err);
+    res.send(errNews);
   }
 });
 
