@@ -6,7 +6,7 @@
 
 .greeting-text {
   color: black;
-  font-family: 'Playfair Display SC', serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 80px;
 }
@@ -15,7 +15,7 @@
   border: none;
   color: black;
   background-color: transparent;
-  font-family: 'Playfair Display SC', serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 80px;
   min-width: 4px;
