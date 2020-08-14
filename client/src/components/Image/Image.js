@@ -10,7 +10,7 @@ function Image(props) {
         style={{ backgroundImage: `url(${image})` }}
       />
       <p className="image-author">
-        <a href={`${imgSource}`} target="_blank">
+        <a href={`${imgSource}`} rel="noopener noreferrer" target="_blank">
           {author} / Unsplash
         </a>
       </p>
