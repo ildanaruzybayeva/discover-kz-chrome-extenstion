@@ -15,6 +15,7 @@ const URL = "https://kz-extension.herokuapp.com";
 
 function Background() {
   const [image, setImage] = useState("");
+  const [imgSource, setImgSource] = useState("");
   const [author, setAuthor] = useState("");
   const [city, setCity] = useState("");
   const [temperature, setTemperature] = useState(0);
@@ -40,7 +41,8 @@ function Background() {
       .then(res => res.json())
       .then(data => {
         setImage(data[randNum].urls.raw);
-        setAuthor(data[randNum].user.username);
+        setAuthor(data[randNum].user.name);
+        setImgSource(data[randNum].links.html);
       });
     return data;
   };
@@ -88,7 +90,7 @@ function Background() {
   return (
     <div className="container">
       <div className="image-container">
-        <Image author={author} image={image} />
+        <Image author={author} image={image} imgSource={imgSource} />
       </div>
       <div className="info-container">
         <div className="info-top">
