@@ -15,7 +15,9 @@ app.use("/", require("./routes/news"));
 app.use("/", require("./routes/quotes"));
 
 app.get("/", (req, res) => {
-  res.send("The server is running, use /weather /photos to get data!");
+  res.send(
+    "The server is running. Available routes: /weather /photos /news /currency /quotes"
+  );
 });
 
 app.use((req, res, next) => {
