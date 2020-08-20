@@ -61,3 +61,17 @@
 .input-container > .greeting-input:focus + .input-underline {
   left: 0;
 }
+
+@media only screen and (max-width: 910px) {
+  .greeting-text,
+  .greeting-input {
+      font-size: 4em;
+  }
+}
+
+@media only screen and (max-width: 813px) {
+  .greeting-text,
+  .greeting-input {
+      font-size: 3.5em;
+  }
+}

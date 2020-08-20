@@ -57,3 +57,21 @@ padding-right: 1vw;
   padding: 0 16px 0 16px;
   align-self: end;
 }
+
+@media only screen and (max-width: 980px) {
+  .info-container {
+      grid-template-rows: 9vh 30.5vh 40vh 8vh 9vh;
+  }
+}
+
+@media only screen and (max-width: 910px) {
+  .info-container {
+      grid-template-rows: 9vh 27.5vh 43vh 8vh 9vh;
+  }
+}
+
+@media only screen and (max-width: 813px) {
+  .info-container {
+      grid-template-rows: 10vh 24.5vh 46vh 8vh 9vh;
+  }
+}
