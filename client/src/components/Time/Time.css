@@ -1,6 +1,11 @@
 .Time {
+  height: 100%;
   color: black;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }

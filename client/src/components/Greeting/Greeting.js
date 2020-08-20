@@ -8,13 +8,16 @@ export default function Greeting(props) {
   return (
     <div className="Greeting">
       <h1 className="greeting-text">{greeting},</h1>
-      <input
-        className="greeting-input"
-        type="text"
-        placeholder="atyńyz kіm?"
-        value={props.username}
-        onChange={props.handleChange}
-      />
+      <div className="input-container">
+        <input 
+          className="greeting-input"
+          type="text" 
+          placeholder="atyńyz kіm?"
+          value={props.username}
+          onChange={props.handleChange}
+        />
+        <span className="input-underline"></span>
+      </div>
     </div>
   );
 }

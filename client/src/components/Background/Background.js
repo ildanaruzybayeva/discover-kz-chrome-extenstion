@@ -93,6 +93,7 @@ function Background() {
         <Image author={author} image={image} imgSource={imgSource} />
       </div>
       <div className="info-container">
+        <div className="background"></div>
         <div className="info-top">
           <Weather temperature={temperature} city={city} icon={icon} />
           <Time />
@@ -101,7 +102,6 @@ function Background() {
         <div className="greeting-container">
           <Greeting username={username} handleChange={handleChange} />
         </div>
-        <div className="info-bottom">
           <div className="news-container">
             {news.map(n => {
               return <News title={n.title} link={n.link} key={n.title} />;
@@ -113,7 +113,6 @@ function Background() {
           <div className="quote-container">
             <Quote quotes={quotes} />
           </div>
-        </div>
       </div>
     </div>
   );

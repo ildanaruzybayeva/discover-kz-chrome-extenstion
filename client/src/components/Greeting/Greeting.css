@@ -1,14 +1,22 @@
 .Greeting {
   width: 100%;
   background-color: white;
-  padding: 0 14px 14px 18px;
 }
 
 .greeting-text {
   color: black;
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
-  font-size: 80px;
+  font-size: 4.5em;
+  padding-left: 16px;
+  text-transform: uppercase;
+}
+
+.input-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin-left: 5vw;
 }
 
 .greeting-input {
@@ -16,15 +24,40 @@
   color: black;
   background-color: transparent;
   font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
   font-weight: 700;
-  font-size: 80px;
-  min-width: 4px;
-  max-width: 50vw;
-  margin-top: -32px;
-  margin-left: 64px;
+  font-size: 4.5em;
+  width: -webkit-fill-available;
+  margin-top: -18px;
+  transition: .2s;
+  padding-bottom: 6px;
+}
+
+.greeting-input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+    transition: .2s;
+}
+
+.greeting-input:hover::placeholder {
+    color: black;
 }
 
 .greeting-input:focus {
   outline: none;
-  border-bottom: 2px solid black;
+}
+
+.input-underline {
+  transition: all 0.5s;
+  display: inline-block;
+  bottom: 0;
+  left: -100%;
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  background-color: black;
+  margin-bottom: 4px;
+}
+
+.input-container > .greeting-input:focus + .input-underline {
+  left: 0;
 }

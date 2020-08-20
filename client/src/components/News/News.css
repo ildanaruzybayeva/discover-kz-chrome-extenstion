@@ -1,10 +1,10 @@
 .news-paragraph {
-  color: #776E6E;
+  color: rgba(0, 0, 0, 0.5);
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 14px;
-  margin-bottom: 22px;
   text-decoration: none;
+  transition: .2s;
 }
 
 .news-paragraph:hover {
