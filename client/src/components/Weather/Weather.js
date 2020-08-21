@@ -12,7 +12,7 @@ function Weather(props) {
                 />
                 <p className="paragraph-city-info">{props.temperature}°C</p>
             </div>
-            <p className="paragraph-city-info">{props.city}</p>
+            <p className="paragraph-city-info paragraph-city">{props.city}</p>
         </div>
     );
 }

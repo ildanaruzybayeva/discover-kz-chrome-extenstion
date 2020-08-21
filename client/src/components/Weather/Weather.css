@@ -7,6 +7,7 @@
 .weather-info {
     display: flex;
     align-items: center;
+    margin-top: -14px;
 }
 
 .weather-icon {
@@ -19,6 +20,22 @@
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 18px;
+}
+
+.paragraph-city {
   margin-top: -10px;
+}
+
+@media only screen and (max-width: 980px) {
+  .paragraph-city-info {
+    font-size: 14px;
+  }
+  .paragraph-city {
+    margin-top: -8px;
+  }
+  .weather-icon {
+    width: 40px;
+    height: 40px;
+  }
 }
 
