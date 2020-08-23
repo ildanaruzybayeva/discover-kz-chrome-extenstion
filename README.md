@@ -38,8 +38,8 @@ If you wish to contribute to Discover Kazakhstan, follow these steps:
 
 ## Team
 
-* [@ildanaruzybayeva](https://github.com/ildanaruzybayeva) 📖
-* [@sandraols](https://github.com/sandraols) 🐛
+* [@ildanaruzybayeva](https://github.com/ildanaruzybayeva) Architecture in Front-end & Back-end / Deployment + Maintanace 📖
+* [@sandraols](https://github.com/sandraols) Design / Front-end 🐛
 
 
 ## Contact
