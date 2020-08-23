@@ -1,4 +1,4 @@
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/ildanaruzybayeva/discover-kz-chrome-extenstion) [![Netlify Status](https://api.netlify.com/api/v1/badges/e57c53c1-0011-45ba-a8f9-e158efd21552/deploy-status)](https://app.netlify.com/sites/discover-kz-extension/deploys)
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/ildanaruzybayeva/discover-kz-chrome-extenstion) 
 
 
 
