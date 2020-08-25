@@ -35,10 +35,22 @@ const today = new Date();
 const day = today.getDate();
 const month = monthNames[today.getMonth()];
 
+const choosePhoto = () => {
+  const getFeaturedPhotoNumber = today.getDate();
+  if (getFeaturedPhotoNumber > 30) {
+    return randNum;
+  } else {
+    return getFeaturedPhotoNumber;
+  }
+};
+
+const photoNum = choosePhoto();
+
 module.exports = {
   randNum,
   almatyTimeHour,
   chooseGreeting,
   month,
-  day
+  day,
+  photoNum
 };

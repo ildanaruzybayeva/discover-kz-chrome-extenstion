@@ -9,7 +9,7 @@ import Search from "../Search/Search";
 import Quote from "../Quote/Quote";
 import useLocalStorage from "./customHooks/useLocalStorage";
 import "./Background.css";
-import { randNum } from "../../utils/helpers/helpers";
+import { randNum, photoNum } from "../../utils/helpers/helpers";
 
 const URL = "https://kz-extension.herokuapp.com";
 
@@ -40,9 +40,9 @@ function Background() {
     const data = fetch(`${URL}/photos`)
       .then(res => res.json())
       .then(data => {
-        setImage(data[randNum].urls.raw);
-        setAuthor(data[randNum].user.name);
-        setImgSource(data[randNum].links.html);
+        setImage(data[photoNum].urls.raw);
+        setAuthor(data[photoNum].user.name);
+        setImgSource(data[photoNum].links.html);
       });
     return data;
   };
@@ -102,17 +102,17 @@ function Background() {
         <div className="greeting-container">
           <Greeting username={username} handleChange={handleChange} />
         </div>
-          <div className="news-container">
-            {news.map(n => {
-              return <News title={n.title} link={n.link} key={n.title} />;
-            })}
-          </div>
-          <div className="search-container">
-            <Search />
-          </div>
-          <div className="quote-container">
-            <Quote quotes={quotes} />
-          </div>
+        <div className="news-container">
+          {news.map(n => {
+            return <News title={n.title} link={n.link} key={n.title} />;
+          })}
+        </div>
+        <div className="search-container">
+          <Search />
+        </div>
+        <div className="quote-container">
+          <Quote quotes={quotes} />
+        </div>
       </div>
     </div>
   );
