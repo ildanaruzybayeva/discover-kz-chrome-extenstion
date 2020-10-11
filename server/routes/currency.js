@@ -2,8 +2,9 @@ const express = require("express");
 const router = express.Router();
 const fetch = require("node-fetch");
 
-const FREE_URL = `https://free.currconv.com/api/v7/convert?q=USD_KZT,EUR_KZT&compact=ultra&apiKey=${process.env.currencyAPI}`;
-const URL = `https://api.currconv.com/api/v7/convert?q=USD_KZT,EUR_KZT&compact=ultra&apiKey=${process.env.currencyAPI}`;
+const FREE_URL =
+  `https://free.currconv.com/api/v7/convert?q=USD_KZT,EUR_KZT&compact=ultra&apiKey=${process.env.currency}`;
+//const URL = `https://api.currconv.com/api/v7/convert?q=USD_KZT,EUR_KZT&compact=ultra&apiKey=${process.env.currencyAPI}`;
 
 const defaultRates = {
   USD_KZT: 415,
@@ -12,7 +13,7 @@ const defaultRates = {
 
 router.get("/currency", async (req, res) => {
   try {
-    const response = await fetch(URL);
+    const response = await fetch(FREE_URL);
     const data = await response.json();
     res.send(data);
   } catch (err) {
