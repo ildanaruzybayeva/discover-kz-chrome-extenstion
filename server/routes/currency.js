@@ -13,7 +13,7 @@ const defaultRates = {
 
 router.get("/currency", async (req, res) => {
   try {
-    const response = await fetch(FREE_URL);
+    const response = await fetch(FREE_URL || defaultRates);
     const data = await response.json();
     res.send(data);
   } catch (err) {
