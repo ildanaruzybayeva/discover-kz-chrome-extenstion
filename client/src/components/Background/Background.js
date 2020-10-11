@@ -11,7 +11,8 @@ import useLocalStorage from "./customHooks/useLocalStorage";
 import "./Background.css";
 import { randNum, photoNum } from "../../utils/helpers/helpers";
 
-const URL = "https://kz-extension.herokuapp.com";
+const URL_DEV = "https://8000-a62ec957-6f17-47d5-88ec-5273f909446c.ws-eu01.gitpod.io";
+const URL = "https://kz-extension.herokuapp.com"
 
 function Background() {
   const [image, setImage] = useState("");
@@ -23,9 +24,10 @@ function Background() {
   const [currency, setCurrency] = useState({});
   const [username, setUsername] = useLocalStorage("name", "");
   const [news, setNews] = useLocalStorage("news", []);
-  const [quotes, setQuotes] = useState([]);
+  const [quotes, setQuotes] = useState([]); 
 
-  const getWeather = () => {
+  useEffect(() => {
+        const getWeather = () => {
     const data = fetch(`${URL}/weather`)
       .then(res => res.json())
       .then(data => {
@@ -74,14 +76,12 @@ function Background() {
       });
     return data;
   };
-
-  useEffect(() => {
     getWeather();
     getPhoto();
     getCurrency();
     getNews();
     getQuotes();
-  }, []);
+  }, [setNews]);
 
   const handleChange = e => {
     return setUsername(e.target.value);
