@@ -7,7 +7,7 @@ function Search() {
     <form
       className="searchform-container"
       type="submit"
-      action="http://google.com/search"
+      action="https://google.com/search"
       target="_blank"
     >
       <input
